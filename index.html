@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楓奈爾嚴選 shop.com/fonelle－保健｜窈窕｜美容｜生活</title>
+    <style type="text/css">
+        /* 1. 移除邊距並讓 body 撐滿整個視窗高度 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #013927;
+            overflow: hidden; /* 防止出現捲軸 */
+        }
+
+        /* 2. 讓連結（a 標籤）成為容器，佔滿全螢幕並垂直水平置中 */
+        .fullscreen-link {
+            display: flex;
+            justify-content: center; /* 水平置中 */
+            align-items: center;    /* 垂直置中 */
+            width: 100%;
+            height: 100%;
+            text-decoration: none;  /* 移除超連結底線 */
+            cursor: pointer;        /* 確保游標呈現手指狀 */
+        }
+
+        /* 3. 圖片自適應縮放，不超過螢幕尺寸 */
+        .fullscreen-link img {
+            max-width: 90%;         /* 寬度最大為螢幕的 90% (保留一點邊距) */
+            max-height: 90%;        /* 高度最大為螢幕的 90% */
+            object-fit: contain;    /* 保持圖片比例縮放 */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.php" class="fullscreen-link">
+        <img src="images/3.png" alt="進入首頁">
+    </a>
+
+</body>
+</html>
