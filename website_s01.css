@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Noto+Sans+TC:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap');
+
+body {
+    /* 先吃英文 Calibri，沒寫到的字(中文)再吃 Noto Sans TC */
+    font-family: 'Calibri', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 16px;
+    padding-top: 60px;
+}
+
+.navbar {
+    padding: 0;
+    background-color: #023927;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: bolder;
+    font-size: 1.2vw;
+}
+
+#content {
+    margin-top: 10px;
+}
+
+.row .col-md-2 .sidebar,
+.accordion-button {
+    border: 2px solid #dfdfdf;
+    background: #f7f7f7;
+}
+
+.sidebar {
+    padding: 5px;
+}
+
+.accordion-button {
+    font-size: 1.5vw;
+}
+
+.accordion-body table td:hover {
+    background-color: antiquewhite;
+}
+
+.accordion-body {
+    padding: 0;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+table td {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 2rem;
+    font-size: 0.8vw;
+}
+
+#aboutme {
+    background-color:  rgba(2, 57, 39, 0.71);
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#last-data {
+    height: 100px;
+    background-color: rgba(2, 57, 39, 0.31);
+    padding-top: 10px;
+}
+
+
+
+
+/* .dropdown-item {
+    color: #337ab7 !important;
+    font-size: 1.2vw;
+}
+
+.dropdown .dropdown-item:hover 
+.dropdown .dropdown-item:focus {
+    color: #fff !important;
+    background-color: #337ab7;
+} */
+
+
+
+
+/* 1. 基本 hover 效果：直接對所有 dropdown-item 生效 */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #fff !important;
+    background-color: #337ab7 !important;
+}
+
+/* 2. 關鍵修正：當父層 li 被 hover 時，保持內部的 a 標籤為藍底 */
+/* 這樣當你滑到第三層 (submenu) 時，第二層的父項目才不會變回灰色 */
+.dropdown-menu li:hover>.dropdown-item {
+    color: #fff !important;
+    background-color: #337ab7;
+}
+
+/* 3. 調整字體大小 (沿用你的 1.2vw) */
+.dropdown-item {
+    color: #337ab7 !important;
+    font-size: 1.2vw;
+}
+
+
+
+
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+    margin-right: 80%;
+}
+
+.dropdown .dropdown-menu {
+    /* background-color: antiquewhite; */
+    display: none;
+}
+
+/* @media screen and (min-width:769px){
+    .dropdown:hover>.dropdown-menu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+} */
+
+/* 針對大螢幕（桌機版）的第三層定位 */
+@media screen and (min-width: 993px) {
+
+    /* 確保第二層項目是定位基準 */
+    .dropdown-menu li {
+        position: relative;
+    }
+
+    /* 第三層選單（在第二層裡面的選單） */
+    .dropdown-menu .dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        /* 往右推開 */
+        margin-left: 0.125em;
+    }
+}
+
+.card.text-center.mt-3 img {
+    opacity: 1;
+    transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+}
+
+.card.text-center.mt-3 img:hover {
+    opacity: 0.5;
+    border: 1px solid #e600a0;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.col-md-10 nav {
+    margin-left: -10px;
+    margin-right: -10px;
+    /* margin-right: 1000px; */
+}
+
+.col-md-10 nav {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card .row.mt-2 .col-md-4 a>img:hover {
+    border: 1px solid #e600a0;
+}
+
+.color_e600a0 {
+    color: #e600a0;
+}
+
+.color-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.badge.text-bg-info {
+    font-size: 40%;
+    color: #FFF !important;
+}
